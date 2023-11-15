@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganjil Genap</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      
+      var table = document.getElementById("outputTable");
+
+      
+      for (var i = 1; i <= 8; i++) {
+       
+        var isGanjil = i % 2 !== 0;
+
+        
+        var row = table.insertRow();
+
+        
+        var cellNumber = row.insertCell(0);
+        var cellStatus = row.insertCell(1);
+
+        
+        cellNumber.textContent = i;
+        cellStatus.textContent = isGanjil ? "Ganjil" : "Genap";
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Ganjil Genap</h1>
+  
+  <table id="outputTable">
+    <tr>
+      <th>Angka</th>
+      <th>Status</th>
+    </tr>
+  </table>
+</body>
+</html>
